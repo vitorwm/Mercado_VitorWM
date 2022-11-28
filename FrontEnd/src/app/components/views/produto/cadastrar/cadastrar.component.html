@@ -1,0 +1,33 @@
+<mat-card>
+  <mat-card-title> Novo Produto </mat-card-title>
+  <mat-card-content>
+    <mat-form-field class="produto">
+      <mat-label for="data">Descrição</mat-label>
+      <input matInput placeholder="Digite a descrição do produto" type="text" name="descricao" [(ngModel)]="descricao" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Select an option</mat-label>
+      <mat-select [(value)]="tipoProduto">
+        <mat-option>None</mat-option>
+        <mat-option value="ELETRONICO">ELETRONICO</mat-option>
+        <mat-option value="ELETRODOMESTICO">ELETRODOMESTICO</mat-option>
+        <mat-option value="MOVEL">MOVEL</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="produto">
+      <mat-label for="data">Valor do Fornecedor</mat-label>
+      <input matInput placeholder="Digite o valor cobrado pelo Fornecedor" type="number" name="valorFornecedor" [(ngModel)]="valorFornecedor" />
+    </mat-form-field>
+
+    <mat-form-field class="produto">
+      <mat-label for="data">Estoque</mat-label>
+      <input matInput placeholder="Digite o numero de unidades compradas" type="number" name="estoque" [(ngModel)]="estoque" />
+    </mat-form-field>
+
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="cadastrar()">Concluir</button>
+    </mat-card-actions>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,72 @@
+<table mat-table [dataSource]="movimentos" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> Id </th>
+    <td mat-cell *matCellDef="let movimento"> {{movimento.id}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="tipoMovimento">
+    <th mat-header-cell *matHeaderCellDef> Movimento </th>
+    <td mat-cell *matCellDef="let movimento"> {{ movimento.tipoMovimento}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="valorVenda">
+    <th mat-header-cell *matHeaderCellDef> Valor de venda </th>
+    <td mat-cell *matCellDef="let movimento"> {{ movimento.valorVenda }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="qtdeMovimentada">
+    <th mat-header-cell *matHeaderCellDef> Quantidade movimentada </th>
+    <td mat-cell *matCellDef="let movimento"> {{ movimento.qtdeMovimentada }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="data">
+    <th mat-header-cell *matHeaderCellDef> Data </th>
+    <td mat-cell *matCellDef="let movimento"> {{ movimento.data }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="id_produto">
+      <th mat-header-cell *matHeaderCellDef> id do produto </th>
+      <td mat-cell *matCellDef="let movimento"> {{ movimento.produto.id} </td>
+    </ng-container>
+
+
+
+
+    <ng-container matColumnDef="descricao">
+      <th mat-header-cell *matHeaderCellDef> Descricao do Produto </th>
+      <td mat-cell *matCellDef="let movimento"> {{ movimento.produto.descricao}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="tipo">
+        <th mat-header-cell *matHeaderCellDef> Tipo do Produto </th>
+        <td mat-cell *matCellDef="let movimento"> {{ movimento.produto.tipo}} </td>
+      </ng-container>
+
+    <ng-container matColumnDef="valorFornecedor">
+      <th mat-header-cell *matHeaderCellDef> Valor do Fornecedor </th>
+      <td mat-cell *matCellDef="let movimento"> {{ movimento.produto.valorFornecedor }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="estoque">
+      <th mat-header-cell *matHeaderCellDef> Estoque do Produto </th>
+      <td mat-cell *matCellDef="let movimento"> {{ movimento.produto.estoque }} </td>
+    </ng-container>
+
+
+
+
+
+      <ng-container matColumnDef="deletar">
+        <th mat-header-cell *matHeaderCellDef> Deletar </th>
+        <td mat-cell *matCellDef="let movimento">
+          <button mat-icon-button (click)="deletar(movimento.id)" matTooltip="Click to Delete" class="iconbutton" color="warn">
+
+            <mat-icon aria-label="deletar">delete</mat-icon>
+          </button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
