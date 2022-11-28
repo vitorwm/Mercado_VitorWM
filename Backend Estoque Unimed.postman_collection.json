@@ -1,0 +1,224 @@
+{
+	"info": {
+		"_postman_id": "cd16ea08-b891-4b9d-9251-bda5c38c1730",
+		"name": "Backend Estoque Unimed",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17875927"
+	},
+	"item": [
+		{
+			"name": "Cadastrar Produto",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"descricao\" : \"smarttv philco 47'\",\r\n    \"estoque\" : 30,\r\n    \"valorFornecedor\" : 2125.99,\r\n    \"tipo\" : \"ELETRONICO\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/mercado/produto/novo/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mercado",
+						"produto",
+						"novo",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Produtos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/mercado/produto/listar/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mercado",
+						"produto",
+						"listar",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Estoque - Entrada",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tipoMovimentacao\": \"ENTRADA\",   \r\n    \"qtdeMovimentada\": 6,\r\n    \"data\" : \"2022-11-28\",\r\n    \"produto\" : {\r\n        \"id\" : 5\r\n    }\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/mercado/estoque/movimento/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mercado",
+						"estoque",
+						"movimento",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Estoque - Saída",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tipoMovimentacao\": \"SAIDA\",\r\n    \"valorVenda\": 1550.00,\r\n    \"qtdeMovimentada\": 72,\r\n    \"data\" : \"2022-11-28\",\r\n    \"produto\" : {\r\n        \"id\" : 5\r\n    }\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/mercado/estoque/movimento/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mercado",
+						"estoque",
+						"movimento",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Estoque - Obter Todos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/mercado/estoque/movimentacoes/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mercado",
+						"estoque",
+						"movimentacoes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Estoque - por Id do produto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/mercado/estoque/movimentoproduto/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mercado",
+						"estoque",
+						"movimentoproduto",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Estoque - por tipo do produto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/mercado/estoque/movimentoprodutoportipo/ELETRONICO",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mercado",
+						"estoque",
+						"movimentoprodutoportipo",
+						"ELETRONICO"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Estoque - lucro por roduto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/mercado/estoque/movimentofinanceiro/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mercado",
+						"estoque",
+						"movimentofinanceiro",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
