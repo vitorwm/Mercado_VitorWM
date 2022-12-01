@@ -16,7 +16,7 @@ const routes: Routes = [
     component: CadastrarComponent
   },
   {
-  path: 'produtos/atualizar',
+  path: 'produto/atualiza/:id',
   component: AtualizarComponent
   },
   {

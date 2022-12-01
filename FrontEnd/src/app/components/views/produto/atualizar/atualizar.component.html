@@ -1,1 +1,38 @@
-<p>atualizar works!</p>
+<mat-card>
+  <mat-card-title> Atualizar Produto </mat-card-title>
+  <mat-card-content>
+    <mat-form-field class="produto">
+      <mat-label for="data">Descrição</mat-label>
+      <input matInput placeholder="Digite a descrição do produto" type="text" name="descricao" [(ngModel)]="descricao" />
+    </mat-form-field>
+
+
+
+    <mat-form-field>
+      <mat-label>Tipo</mat-label>
+      <select matNativeControl [(ngModel)]="tipo">
+        <option value="ELETRONICO">ELETRONICO</option>
+        <option value="ELETRODOMESTICO">ELETRODOMESTICO</option>
+        <option value="MOVEL">MOVEL</option>
+      </select>
+    </mat-form-field>
+
+
+
+
+
+    <mat-form-field class="produto">
+      <mat-label for="data">Valor do Fornecedor</mat-label>
+      <input matInput placeholder="Digite o valor cobrado pelo Fornecedor" type="number" name="valorFornecedor" [(ngModel)]="valorFornecedor" />
+    </mat-form-field>
+
+    <mat-form-field class="produto">
+      <mat-label for="data">Estoque</mat-label>
+      <input matInput placeholder="Digite o numero de unidades compradas" type="number" name="estoque" [(ngModel)]="estoque" />
+    </mat-form-field>
+
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="atualizar(id)">Concluir</button>
+    </mat-card-actions>
+  </mat-card-content>
+</mat-card>

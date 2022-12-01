@@ -20,17 +20,17 @@ export class ProdutoService {
     return this.http.post<Produto>(`${this.baseURL}/novo`, produto);
   }
 
-  deletar(codigo: number): Observable<any> {
-    return this.http.delete(`${this.baseURL}/remove/${codigo}`);
+  deletar(id: number): Observable<any> {
+    return this.http.delete(`${this.baseURL}/remove/${id}`);
   }
 
 
-  listarPorId(codigo: number): Observable<Object> {
-    return this.http.get(`${this.baseURL}/consulta/${codigo}`);
+  listarPorId(id: number): Observable<Object> {
+    return this.http.get(`${this.baseURL}/consulta/${id}`);
   }
 
-  atualizar(codigo: number, produto: Produto): Observable<Object> {
-    return this.http.put(`${this.baseURL}/atualiza/${codigo}`,produto);
+  atualizar(id: number, produto: Produto): Observable<Object> {
+    return this.http.put(`${this.baseURL}/atualiza/${id}`,produto);
   }
 
 

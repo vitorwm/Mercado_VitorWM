@@ -16,27 +16,7 @@ export class CadastrarComponent implements OnInit {
   preco!: number;
   valorFornecedor!: number;
   estoque!: number;
-
   tipo!: TipoProduto;
-
-
-  public get tipoProdutos(): typeof TipoProduto {
-    return TipoProduto;
-  }
-
-
-  week = null;
-  week1 = null;
-  tipos = TipoProduto;
-
-
-  keys = Object.keys;
-
-
-  enumKeys=[];
-
-
-
 
   constructor( private produtoService: ProdutoService, private router: Router, private snack: MatSnackBar, private route: ActivatedRoute) {}
 
@@ -46,11 +26,7 @@ ngOnInit(): void {}
 
   cadastrar(): void {
 
-
-
     let produto = new Produto();
-
-    //this.tipoProduto = Object.keys(this.tipos).filter(f => !isNaN(Number(f)));
 
     produto.id = this.id;
     produto.descricao = this.descricao;

@@ -19,11 +19,15 @@ export class MovEstoqueService {
   }
 
   listarPorId(id: number): Observable<MovEstoque[]> {
-    return this.http.get<MovEstoque[]>(`${this.baseURL}/movimentacoes/${id}`);
+    return this.http.get<MovEstoque[]>(`${this.baseURL}/consulta/${id}`);
+  }
+
+  listarPorIdProduto(id: number): Observable<MovEstoque[]> {
+    return this.http.get<MovEstoque[]>(`${this.baseURL}/movimentoproduto/${id}`);
   }
 
   listarPorTipo(tipo: TipoProduto): Observable<MovEstoque[]> {
-    return this.http.get<MovEstoque[]>(`${this.baseURL}/movimentacoes/${tipo}`);
+    return this.http.get<MovEstoque[]>(`${this.baseURL}/movimentoprodutoportipo/${tipo}`);
   }
 
   listarLucro(): Observable<MovEstoque[]> {

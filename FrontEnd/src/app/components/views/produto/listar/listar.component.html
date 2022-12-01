@@ -30,6 +30,16 @@
     <td mat-cell *matCellDef="let produto"> {{ produto.estoque }} </td>
   </ng-container>
 
+  <ng-container matColumnDef="editar">
+    <th mat-header-cell *matHeaderCellDef> Editar </th>
+    <td mat-cell *matCellDef="let produto">
+      <button mat-icon-button (click)="atualizar(produto.id)" matTooltip="Click to update" class="iconbutton" color="primary">
+
+        <mat-icon aria-label="editar">edit</mat-icon>
+      </button>
+</td>
+</ng-container>
+
       <ng-container matColumnDef="deletar">
         <th mat-header-cell *matHeaderCellDef> Deletar </th>
         <td mat-cell *matCellDef="let produto">

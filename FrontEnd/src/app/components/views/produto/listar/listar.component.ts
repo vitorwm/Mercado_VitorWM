@@ -11,7 +11,7 @@ import { ProdutoService } from 'src/app/services/produto.service';
 })
 export class ListarComponent implements OnInit {
   produtos!: MatTableDataSource<Produto>;
-  displayedColumns: string[] = ['id', 'descricao', 'tipo', 'valorFornecedor', 'estoque' , 'deletar'];
+  displayedColumns: string[] = ['id', 'descricao', 'tipo', 'valorFornecedor', 'estoque' , 'editar', 'deletar'];
 
   constructor(private service: ProdutoService, private router:Router) {}
 
@@ -28,21 +28,9 @@ export class ListarComponent implements OnInit {
 
   }
 
- /* atualizar(){
-    this.service.atualizar(this.produtos, Produto).subscribe(
-      (resp) => {
-        console.log(resp);
-      },
-      (err) => {
-        console.log(err);
-      }
-    );
-  }
-*/
   atualizar(id:any){
-    this.router.navigate(['produto/atualizar/'+id
+    this.router.navigate(['produto/atualiza/'+id
   ])
  }
-
 
 }

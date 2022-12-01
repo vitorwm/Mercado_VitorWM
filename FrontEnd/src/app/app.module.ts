@@ -1,3 +1,4 @@
+import { AtualizarComponent } from './components/views/produto/atualizar/atualizar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -33,6 +34,7 @@ import { ListarMovimentoComponent } from './components/views/movimentoEstoque/li
     ContentComponent,
     HeaderComponent,
     CadastrarComponent,
+    AtualizarComponent,
     ListarComponent,
     ListarMovimentoComponent,
   ],
