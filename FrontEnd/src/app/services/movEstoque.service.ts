@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { MovEstoque } from '../models/MovEstoque';
+import { MovEstoqueLucro } from '../models/MovEstoqueLucro';
 
 
 @Injectable({
@@ -30,8 +31,8 @@ export class MovEstoqueService {
     return this.http.get<MovEstoque[]>(`${this.baseURL}/movimentoprodutoportipo/${tipo}`);
   }
 
-  listarLucro(): Observable<MovEstoque[]> {
-    return this.http.get<MovEstoque[]>(`${this.baseURL}/movimentofinanceiro`);
+  listarLucro(): Observable<MovEstoqueLucro[]> {
+    return this.http.get<MovEstoqueLucro[]>(`${this.baseURL}/movimentofinanceiro`);
   }
 
   cadastrar(movEstoque: MovEstoque): Observable<MovEstoque> {

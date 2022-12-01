@@ -1,3 +1,4 @@
+import { ListarLucroComponent } from './components/views/movimentoEstoque/listar-lucro/listar-lucro.component';
 import { AtualizarComponent } from './components/views/produto/atualizar/atualizar.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'estoque/movimentacoes',
     component: ListarMovimentoComponent
+    },
+  {
+    path: 'estoque/movimentofinanceiro',
+    component: ListarLucroComponent
     }
 ];
 

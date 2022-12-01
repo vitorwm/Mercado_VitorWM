@@ -3,7 +3,6 @@ import { MovEstoqueService } from './../../../../services/movEstoque.service';
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
-import { Produto } from 'src/app/models/Produto';
 
 @Component({
   selector: 'app-listar',
@@ -12,9 +11,7 @@ import { Produto } from 'src/app/models/Produto';
 })
 export class ListarMovimentoComponent implements OnInit {
 
-
   movimentos!: MatTableDataSource<MovEstoque>;
-  produtos!: MatTableDataSource<Produto>;
 
   displayedColumns: string[] =
   ['id', 'tipoMovimentacao', 'valorVenda','qtdeMovimentada', 'data' ,
