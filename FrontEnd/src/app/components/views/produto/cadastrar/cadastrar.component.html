@@ -6,15 +6,20 @@
       <input matInput placeholder="Digite a descrição do produto" type="text" name="descricao" [(ngModel)]="descricao" />
     </mat-form-field>
 
-    <mat-form-field appearance="fill">
-      <mat-label>Select an option</mat-label>
-      <mat-select [(value)]="tipoProduto">
-        <mat-option>None</mat-option>
-        <mat-option value="ELETRONICO">ELETRONICO</mat-option>
-        <mat-option value="ELETRODOMESTICO">ELETRODOMESTICO</mat-option>
-        <mat-option value="MOVEL">MOVEL</mat-option>
-      </mat-select>
+
+
+    <mat-form-field>
+      <mat-label>Tipo</mat-label>
+      <select matNativeControl [(ngModel)]="tipo">
+        <option value="ELETRONICO">ELETRONICO</option>
+        <option value="ELETRODOMESTICO">ELETRODOMESTICO</option>
+        <option value="MOVEL">MOVEL</option>
+      </select>
     </mat-form-field>
+
+
+
+
 
     <mat-form-field class="produto">
       <mat-label for="data">Valor do Fornecedor</mat-label>

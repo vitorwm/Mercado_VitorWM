@@ -8,7 +8,7 @@ export enum TipoMovimento {
 export class MovEstoque{
   id?: number;
   produto!: Produto[];
-  tipoMovimento!: TipoMovimento;
+  tipoMovimentacao!: TipoMovimento;
   valorVenda?: number;
   data?: Date;
   qtdeMovimentada!: number;

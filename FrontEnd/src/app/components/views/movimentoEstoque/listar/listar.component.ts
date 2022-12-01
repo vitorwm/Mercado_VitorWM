@@ -17,7 +17,7 @@ export class ListarMovimentoComponent implements OnInit {
   produtos!: MatTableDataSource<Produto>;
 
   displayedColumns: string[] =
-  ['id', 'tipoMovimento', 'valorVenda','qtdeMovimentada', 'data' ,
+  ['id', 'tipoMovimentacao', 'valorVenda','qtdeMovimentada', 'data' ,
    'id_produto', 'descricao','tipo','valorFornecedor','estoque' , 'deletar'];
 
   constructor(private service: MovEstoqueService, private router:Router) {}
@@ -29,32 +29,18 @@ export class ListarMovimentoComponent implements OnInit {
 
     });
   }
-/*
-  ngOnInit(): void {
-    this.retrieveTutorials();
-
-
-  }
-/*
-  retrieveTutorials(): void {
-    this.service.listar()
-      .subscribe({
-        next: (data) => {
-          this.movimentos = new MatTableDataSource<MovEstoque>(movimentos);
-          console.log(data);
-        },
-        error: (e) => console.error(e)
-      });
-  }
-*/
 
   deletar(id: number) {
     this.service.deletar(id)
       .subscribe
         (data => {
-        this.ngOnInit;
+          this.service.listar().subscribe((movimentos) => {
+            this.movimentos = new MatTableDataSource<MovEstoque>(movimentos);
+
+          });
       })
-      this.router.navigate([""]);
+
   }
+
 }
 

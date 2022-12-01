@@ -1,3 +1,4 @@
+import { TipoProduto } from './../models/Produto';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -15,6 +16,18 @@ export class MovEstoqueService {
 
   listar(): Observable<MovEstoque[]> {
     return this.http.get<MovEstoque[]>(`${this.baseURL}/movimentacoes`);
+  }
+
+  listarPorId(id: number): Observable<MovEstoque[]> {
+    return this.http.get<MovEstoque[]>(`${this.baseURL}/movimentacoes/${id}`);
+  }
+
+  listarPorTipo(tipo: TipoProduto): Observable<MovEstoque[]> {
+    return this.http.get<MovEstoque[]>(`${this.baseURL}/movimentacoes/${tipo}`);
+  }
+
+  listarLucro(): Observable<MovEstoque[]> {
+    return this.http.get<MovEstoque[]>(`${this.baseURL}/movimentofinanceiro`);
   }
 
   cadastrar(movEstoque: MovEstoque): Observable<MovEstoque> {

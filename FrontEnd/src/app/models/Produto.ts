@@ -7,7 +7,7 @@ export enum TipoProduto {
 export class Produto{
   id?: number;
   descricao!: string;
-  tipoProduto!: TipoProduto;
+  tipo!: TipoProduto;
   valorFornecedor!: number;
   estoque!: number;
 }

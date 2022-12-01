@@ -22,7 +22,10 @@ export class ListarComponent implements OnInit {
   }
 
   deletar(id: number) {
-    this.service.deletar(id).subscribe(data => {this.ngOnInit;})
+    this.service.deletar(id).subscribe(data => {this.service.listar().subscribe((produtos) => {
+      this.produtos = new MatTableDataSource<Produto>(produtos);
+    });})
+
   }
 
  /* atualizar(){
