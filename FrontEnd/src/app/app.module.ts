@@ -25,6 +25,8 @@ import { ListarComponent } from './components/views/produto/listar/listar.compon
 import { MatDialogModule } from '@angular/material/dialog';
 import { ListarMovimentoComponent } from './components/views/movimentoEstoque/listar/listar.component';
 import { ListarLucroComponent } from './components/views/movimentoEstoque/listar-lucro/listar-lucro.component';
+import { ListarPorTipoComponent } from './components/views/movimentoEstoque/listar-por-tipo/listar-por-tipo.component';
+import { CadastrarMovimentoComponent } from './components/views/movimentoEstoque/cadastrar-movimento/cadastrar-movimento.component';
 
 
 
@@ -39,6 +41,8 @@ import { ListarLucroComponent } from './components/views/movimentoEstoque/listar
     ListarComponent,
     ListarMovimentoComponent,
     ListarLucroComponent,
+    ListarPorTipoComponent,
+    CadastrarMovimentoComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,5 @@
+import { CadastrarMovimentoComponent } from './components/views/movimentoEstoque/cadastrar-movimento/cadastrar-movimento.component';
+import { ListarPorTipoComponent } from './components/views/movimentoEstoque/listar-por-tipo/listar-por-tipo.component';
 import { ListarLucroComponent } from './components/views/movimentoEstoque/listar-lucro/listar-lucro.component';
 import { AtualizarComponent } from './components/views/produto/atualizar/atualizar.component';
 import { NgModule } from '@angular/core';
@@ -23,11 +25,19 @@ const routes: Routes = [
   {
     path: 'estoque/movimentacoes',
     component: ListarMovimentoComponent
-    },
+  },
+  {
+    path: 'estoque/movimento',
+    component: CadastrarMovimentoComponent
+  },
   {
     path: 'estoque/movimentofinanceiro',
     component: ListarLucroComponent
-    }
+  },
+  {
+    path: 'estoque/movimentoprodutoportipo',
+    component: ListarPorTipoComponent
+  }
 ];
 
 @NgModule({
