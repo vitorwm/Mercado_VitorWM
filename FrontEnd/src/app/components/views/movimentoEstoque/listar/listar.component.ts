@@ -39,5 +39,11 @@ export class ListarMovimentoComponent implements OnInit {
 
   }
 
+
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.movimentos.filter = filterValue.trim().toLowerCase();
+  }
+
 }
 

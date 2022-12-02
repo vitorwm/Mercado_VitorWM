@@ -11,5 +11,8 @@ export class MovEstoque{
   valorVenda?: number;
   qtdeMovimentada!: number;
   data?: Date;
-  produto!: Produto[];
+  produto!: {
+    id : number;
+  };
+
 }

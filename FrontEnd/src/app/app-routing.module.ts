@@ -19,6 +19,10 @@ const routes: Routes = [
     component: CadastrarComponent
   },
   {
+    path: 'produto/listar',
+    component: ListarComponent
+  },
+  {
   path: 'produto/atualiza/:id',
   component: AtualizarComponent
   },

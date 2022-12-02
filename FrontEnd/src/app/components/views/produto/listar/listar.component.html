@@ -3,6 +3,12 @@
   Adicionar novo Produto
 </a>
 
+
+<mat-form-field>
+  <mat-label>Filtro</mat-label>
+  <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ELETRONICO" #input>
+</mat-form-field>
+
 <table mat-table [dataSource]="produtos" class="mat-elevation-z8">
 
   <ng-container matColumnDef="id">

@@ -25,8 +25,8 @@ export class ProdutoService {
   }
 
 
-  listarPorId(id: number): Observable<Object> {
-    return this.http.get(`${this.baseURL}/consulta/${id}`);
+  listarPorId(id: number): Observable<Produto[]> {
+    return this.http.get<Produto[]>(`${this.baseURL}/consulta/${id}`);
   }
 
   atualizar(id: number, produto: Produto): Observable<Object> {

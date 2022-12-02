@@ -1,1 +1,37 @@
-<p>cadastrar-movimento works!</p>
+<mat-card>
+  <mat-card-title> Novo Movimentação </mat-card-title>
+  <mat-card-content>
+
+    <mat-form-field>
+      <mat-label>Tipo</mat-label>
+      <select matNativeControl [(ngModel)]="tipoMovimentacao">
+        <option value="ENTRADA">ENTRADA</option>
+        <option value="SAIDA">SAIDA</option>
+      </select>
+    </mat-form-field>
+
+    <mat-form-field class="movEstoque" *ngIf="tipoMovimentacao == 'SAIDA'">
+      <mat-label for="data">Valor de venda</mat-label>
+      <input matInput placeholder="Digite o valor de venda do produto" type="number" name="valorVenda" [(ngModel)]="valorVenda" />
+    </mat-form-field>
+
+    <mat-form-field class="movEstoque">
+      <mat-label for="data">Quantidade Movimentada</mat-label>
+      <input matInput placeholder="Digite o numero de unidades movimentadas" type="number" name="qtdeMovimentada" [(ngModel)]="qtdeMovimentada" />
+    </mat-form-field>
+
+    <mat-form-field class="movEstoque">
+      <mat-label for="data">Data da movimentação</mat-label>
+      <input matInput placeholder="Digite a data da movimentação" type="date" name="data" [(ngModel)]="data" />
+    </mat-form-field>
+
+    <mat-form-field class="movEstoque">
+      <mat-label for="data">Id do produto</mat-label>
+      <input matInput placeholder="Digite o Id do produto" type="number" name="codigo" [(ngModel)]="codigo" />
+    </mat-form-field>
+
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="cadastrar()">Concluir</button>
+    </mat-card-actions>
+  </mat-card-content>
+</mat-card>

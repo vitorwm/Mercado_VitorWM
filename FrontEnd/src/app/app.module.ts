@@ -71,7 +71,8 @@ import { CadastrarMovimentoComponent } from './components/views/movimentoEstoque
     MatButtonModule,
     MatTableModule,
     MatSnackBarModule,
-    MatSelectModule
+    MatSelectModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
