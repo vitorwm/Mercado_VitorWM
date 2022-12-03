@@ -5,6 +5,7 @@ import { TipoMovimento } from 'src/app/models/MovEstoque';
 import { Produto } from 'src/app/models/Produto';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-cadastrar-movimento',
@@ -20,7 +21,6 @@ export class CadastrarMovimentoComponent implements OnInit {
   data!: Date;
   produto!:{id: number;} ;
   codigo!: number
-
 
   constructor( private movEstoqueService: MovEstoqueService, private router: Router, private snack: MatSnackBar, private route: ActivatedRoute) {}
 
@@ -44,15 +44,29 @@ export class CadastrarMovimentoComponent implements OnInit {
     }
 
     this.movEstoqueService.cadastrar(movEstoque).subscribe(movEstoque => {
-      console.log(movEstoque);
-      this.snack.open("Nova Movimentação de Estoque cadastrada com sucesso!", "", {
-        duration: 5000,
-        horizontalPosition: "right",
-        verticalPosition: "top",
+    console.log(movEstoque);
+    this.snack.open("Nova Movimentação de Estoque cadastrada com sucesso!", "", {
+      duration: 5000,
+      horizontalPosition: "right",
+      verticalPosition: "top",
       });
 
       this.router.navigate(["estoque/movimentacoes/"]);
-    });
-  }
+    },err => {
+      if (err instanceof HttpErrorResponse)
+      {
+          if (err.status === 404)
+          {
+            console.log(err)
+            this.snack.open("ERRO 404! NÃO HÁ ESTOQUE SUFICIENTE!", "", {
+              duration: 5000,
+              horizontalPosition: "center",
+              verticalPosition: "top",
+            });
+          }
+      }
+    })
+
+    ;}
 
 }

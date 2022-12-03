@@ -39,7 +39,7 @@ ngOnInit(): void {
 
     this.produtoService.atualizar(id,produto).subscribe(produto => {
       console.log(produto);
-      this.snack.open("Novo Produto cadastrado com sucesso!", "", {
+      this.snack.open("Produto atualizado com sucesso!", "", {
         duration: 5000,
         horizontalPosition: "right",
         verticalPosition: "top",

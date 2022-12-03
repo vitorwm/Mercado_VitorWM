@@ -25,5 +25,9 @@ export class ListarLucroComponent implements OnInit {
 
     });
   }
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.lucros.filter = filterValue.trim().toLowerCase();
+  }
 
 }
