@@ -18,9 +18,11 @@ Aplicação RESTful para controle de estoque. Possui autenticação JWT.
 
 - O Banco de Dados deve ser criado no Postgre com o nome: 'estoque'
 - Senha de conecção utilizada pelo do Banco de Dados:123456
+- Por padrão a string de conecção é jdbc:postgresql://localhost:5432/estoque
+- Configurado pelo application.properties na pasta target/classes/com/ do Back-end
 
 - Portas Utilizadas:
-BackEnd: 8080 ,FrontEnd: 4200
+BackEnd: 8080, postgre: 5432, FrontEnd: 4200
 
 - Instalar todas as extensões do vscode
 
