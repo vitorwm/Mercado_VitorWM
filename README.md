@@ -16,9 +16,11 @@ Aplicação RESTful para controle de estoque. Possui autenticação JWT.
 
 ## Instalação
 
+- Instalar node.js LTS
+- Instalar npm install -g @angular/cli@13.3.10
 - O Banco de Dados deve ser criado no Postgre com o nome: 'estoque'
-- Senha de conecção utilizada pelo do Banco de Dados:123456
-- Por padrão a string de conecção é jdbc:postgresql://localhost:5432/estoque
+- Senha de conexão utilizada pelo Banco de Dados:123456
+- Por padrão a string de conexão é jdbc:postgresql://localhost:5432/estoque
 - Configurado pelo application.properties na pasta target/classes/com/ do Back-end
 
 - Portas Utilizadas:
@@ -77,10 +79,19 @@ Crie o Banco de dados
 Inicie o servidor de API
 
 ```bash
+  cd BackEnd
+```
+
+```bash
 Clique na barra lateral do vscode para abrir a Spring Boot Dashboard. Clique no botão run para executar o projeto.
 ```
 
 Instale as dependências do Front-end;
+
+```bash
+  cd ..
+  cd FrontEnd
+```
 
 
 ```bash
