@@ -1,11 +1,74 @@
 {
 	"info": {
-		"_postman_id": "cd16ea08-b891-4b9d-9251-bda5c38c1730",
+		"_postman_id": "3729782e-2539-44a2-841e-eab05e66ebc1",
 		"name": "Backend Estoque Unimed",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "17875927"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
+		{
+			"name": "Cadastrar Usuáruio",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"fulano@fulano\",\r\n    \"username\": \"fulano\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/mercado/usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mercado",
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"fulano@fulano\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/mercado/usuarios/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mercado",
+						"usuarios",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
 		{
 			"name": "Cadastrar Produto",
 			"protocolProfileBehavior": {
@@ -14,6 +77,16 @@
 				}
 			},
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2MSIsImlhdCI6MTY3MDIxMjQ1NiwiZXhwIjoxNjcwMjk4ODU2fQ.-8zSMjj-7coJpiVjbXVGdwuTqGqyE7VveW49r93kxHYiiyd_d0ElCI5A3N8MhYtxnyJfpg0ew0mW1VKe6tmRgg",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [
 					{
@@ -51,6 +124,16 @@
 		{
 			"name": "Listar Produtos",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2MSIsImlhdCI6MTY3MDIxMjQ1NiwiZXhwIjoxNjcwMjk4ODU2fQ.-8zSMjj-7coJpiVjbXVGdwuTqGqyE7VveW49r93kxHYiiyd_d0ElCI5A3N8MhYtxnyJfpg0ew0mW1VKe6tmRgg",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
@@ -73,6 +156,16 @@
 		{
 			"name": "Estoque - Entrada",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2MSIsImlhdCI6MTY3MDIxMjQ1NiwiZXhwIjoxNjcwMjk4ODU2fQ.-8zSMjj-7coJpiVjbXVGdwuTqGqyE7VveW49r93kxHYiiyd_d0ElCI5A3N8MhYtxnyJfpg0ew0mW1VKe6tmRgg",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
@@ -104,6 +197,16 @@
 		{
 			"name": "Estoque - Saída",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2MSIsImlhdCI6MTY3MDIxMjQ1NiwiZXhwIjoxNjcwMjk4ODU2fQ.-8zSMjj-7coJpiVjbXVGdwuTqGqyE7VveW49r93kxHYiiyd_d0ElCI5A3N8MhYtxnyJfpg0ew0mW1VKe6tmRgg",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
@@ -135,6 +238,16 @@
 		{
 			"name": "Estoque - Obter Todos",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2MSIsImlhdCI6MTY3MDIxMjQ1NiwiZXhwIjoxNjcwMjk4ODU2fQ.-8zSMjj-7coJpiVjbXVGdwuTqGqyE7VveW49r93kxHYiiyd_d0ElCI5A3N8MhYtxnyJfpg0ew0mW1VKe6tmRgg",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
@@ -157,6 +270,16 @@
 		{
 			"name": "Estoque - por Id do produto",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2MSIsImlhdCI6MTY3MDIxMjQ1NiwiZXhwIjoxNjcwMjk4ODU2fQ.-8zSMjj-7coJpiVjbXVGdwuTqGqyE7VveW49r93kxHYiiyd_d0ElCI5A3N8MhYtxnyJfpg0ew0mW1VKe6tmRgg",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
@@ -179,6 +302,16 @@
 		{
 			"name": "Estoque - por tipo do produto",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2MSIsImlhdCI6MTY3MDIxMjQ1NiwiZXhwIjoxNjcwMjk4ODU2fQ.-8zSMjj-7coJpiVjbXVGdwuTqGqyE7VveW49r93kxHYiiyd_d0ElCI5A3N8MhYtxnyJfpg0ew0mW1VKe6tmRgg",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
@@ -201,6 +334,16 @@
 		{
 			"name": "Estoque - lucro por roduto",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2MSIsImlhdCI6MTY3MDIxMjQ1NiwiZXhwIjoxNjcwMjk4ODU2fQ.-8zSMjj-7coJpiVjbXVGdwuTqGqyE7VveW49r93kxHYiiyd_d0ElCI5A3N8MhYtxnyJfpg0ew0mW1VKe6tmRgg",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
