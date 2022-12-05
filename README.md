@@ -2,24 +2,39 @@
 
 Projeto realizado utilizando o Visual Studio Code 
 
-extensões do vscode utilizadas:
+Extensões do vscode utilizadas:
 Java Extension Pack
 Spring Boot Extension Pack
+REST Client
+
 
 Angular Language Service
 Angular Schematics
+HTML CSS Support
+Live Server
 (opcional)Material Icon theme 
 
 Dependencies do pom:
 Spring Web
-pring Boot DevTools
+Spring Boot DevTools
 Spring Data JPA
 Spring Data JDBC
+Spring Boot Actuator
+Spring Security
 PostgreSQL Driver
+Validation I/O
+
+ModelMapper
+JJWT
+Spring Boot Starter Web
+Spring Boot Starter Test
+Spring Boot Starter Security
+Spring Boot Starter Validation
 
 
-O banco de dados deve ser criado no Postgre com o nome: 'estoque'
-senha de conecção utilizada pelo do banco de dados:123456
+
+O Banco de Dados deve ser criado no Postgre com o nome: 'estoque'
+senha de conecção utilizada pelo do Banco de Dados:123456
 
 Portas Utilizadas:
 BackEnd: 8080
