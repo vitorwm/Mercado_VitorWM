@@ -1,4 +1,4 @@
-<a mat-raised-button color="warn" routerLink="produto/novo">
+<a mat-raised-button color="warn" routerLink="../novo">
   <mat-icon>library_add</mat-icon>
   Adicionar novo Produto
 </a>
@@ -28,7 +28,7 @@
 
   <ng-container matColumnDef="valorFornecedor">
     <th mat-header-cell *matHeaderCellDef> Valor do Fornecedor </th>
-    <td mat-cell *matCellDef="let produto"> {{ produto.valorFornecedor }} </td>
+    <td mat-cell *matCellDef="let produto"> {{ produto.valorFornecedor.toFixed(2) }} </td>
   </ng-container>
 
   <ng-container matColumnDef="estoque">

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Produto, TipoProduto } from 'src/app/models/Produto';
@@ -45,7 +46,7 @@ ngOnInit(): void {
         verticalPosition: "top",
       });
 
-      this.router.navigate([""]);
+      this.router.navigate(["produto/listar"]);
     });
   }
 

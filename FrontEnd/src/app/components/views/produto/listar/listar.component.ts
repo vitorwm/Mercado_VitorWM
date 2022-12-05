@@ -1,8 +1,9 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
 import { Produto } from 'src/app/models/Produto';
 import { ProdutoService } from 'src/app/services/produto.service';
+
 
 @Component({
   selector: 'app-listar',
@@ -13,8 +14,11 @@ export class ListarComponent implements OnInit {
   produtos!: MatTableDataSource<Produto>;
   displayedColumns: string[] = ['id', 'descricao', 'tipo', 'valorFornecedor', 'estoque' , 'editar', 'deletar'];
 
+  currentUser: any;
+  userMain: any;
 
   constructor(private service: ProdutoService, private router:Router) {}
+
 
   ngOnInit(): void {
     this.service.listar().subscribe((produtos) => {
@@ -40,5 +44,3 @@ export class ListarComponent implements OnInit {
   this.produtos.filter = filterValue.trim().toLowerCase();
 }
 }
-
-

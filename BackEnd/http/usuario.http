@@ -1,0 +1,22 @@
+POST http://localhost:8080/api/mercado/usuarios
+Content-Type: application/json
+
+{
+    "email": "fulano@fulano",
+    "username": "fulano",
+    "password": "123456"
+}
+###
+
+POST http://localhost:8080/api/mercado/usuarios/login
+Content-Type: application/json
+
+{
+    "email": "fulano@fulano",
+    "password": "123456"
+}
+
+
+###
+GET http://localhost:8080/api/mercado/produto/listar/
+Content-Type: application/json

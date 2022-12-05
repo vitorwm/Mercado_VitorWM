@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ListarLucroComponent } from './listar-lucro.component';
 
 describe('ListarLucroComponent', () => {

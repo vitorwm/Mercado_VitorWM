@@ -1,0 +1,23 @@
+<mat-card>
+  <mat-card-title> Novo Usuário </mat-card-title>
+  <mat-card-content>
+    <mat-form-field class="usuario">
+      <mat-label for="data">Nome do usuario</mat-label>
+      <input matInput placeholder="Digite o nome do usuario" type="text" name="username" [(ngModel)]="username" />
+    </mat-form-field>
+
+    <mat-form-field class="usuario">
+      <mat-label for="data">Email</mat-label>
+      <input matInput placeholder="Digite o seu email" type="text" name="email" [(ngModel)]="email" />
+    </mat-form-field>
+
+    <mat-form-field class="produto">
+      <mat-label for="data">Senha</mat-label>
+      <input matInput placeholder="Digite a sua senha" type="password" name="password" [(ngModel)]="password" />
+    </mat-form-field>
+
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="cadastrar()">Concluir</button>
+    </mat-card-actions>
+  </mat-card-content>
+</mat-card>

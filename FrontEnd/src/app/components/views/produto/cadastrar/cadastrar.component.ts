@@ -42,7 +42,7 @@ ngOnInit(): void {}
         verticalPosition: "top",
       });
 
-      this.router.navigate([""]);
+      this.router.navigate(["produto/listar"]);
     });
   }
 

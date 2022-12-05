@@ -28,7 +28,7 @@
 
   <ng-container matColumnDef="lucroTotal">
     <th mat-header-cell *matHeaderCellDef> Lucro total </th>
-    <td mat-cell *matCellDef="let lucro"> {{ lucro.lucroTotal }} </td>
+    <td mat-cell *matCellDef="let lucro"> {{ lucro.lucroTotal.toFixed(2) }} </td>
   </ng-container>
 
   <ng-container matColumnDef="tipo">

@@ -1,5 +1,5 @@
 import { AtualizarComponent } from './components/views/produto/atualizar/atualizar.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -27,6 +27,12 @@ import { ListarMovimentoComponent } from './components/views/movimentoEstoque/li
 import { ListarLucroComponent } from './components/views/movimentoEstoque/listar-lucro/listar-lucro.component';
 import { ListarPorTipoComponent } from './components/views/movimentoEstoque/listar-por-tipo/listar-por-tipo.component';
 import { CadastrarMovimentoComponent } from './components/views/movimentoEstoque/cadastrar-movimento/cadastrar-movimento.component';
+import { LoginComponent } from './components/views/login/login.component';
+import { RegisterComponent } from './components/views/register/register.component';
+import { HomeComponent } from './components/views/home/home.component';
+import { ProfileComponent } from './components/views/profile/profile.component';
+import { AuthInterceptor } from './_helpers/auth.interceptor';
+
 
 
 
@@ -43,6 +49,10 @@ import { CadastrarMovimentoComponent } from './components/views/movimentoEstoque
     ListarLucroComponent,
     ListarPorTipoComponent,
     CadastrarMovimentoComponent,
+    LoginComponent,
+    RegisterComponent,
+    HomeComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -74,7 +84,13 @@ import { CadastrarMovimentoComponent } from './components/views/movimentoEstoque
     MatSelectModule,
 
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

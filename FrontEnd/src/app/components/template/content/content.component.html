@@ -1,31 +1,47 @@
 <mat-sidenav-container>
   <mat-sidenav opened mode="side" fixedInViewport fixedTopGap="64">
     <mat-nav-list>
-        <a mat-list-item routerLink="">
+        <a mat-list-item routerLink="home">
             <mat-icon matListIcon>home</mat-icon>
             <span>Home</span>
         </a>
-        <a mat-list-item routerLink="produto/novo/">
+
+        <a  mat-list-item *ngIf="!isLoggedIn" routerLink="usuario">
+          <mat-icon matListIcon>person_add</mat-icon>
+          <span>Cadastrar Usuário</span>
+        </a>
+
+        <a  mat-list-item *ngIf="!isLoggedIn" routerLink="usuario/login">
+          <mat-icon matListIcon>account_circle</mat-icon>
+          <span>Login do Usuário</span>
+        </a>
+
+        <a  mat-list-item *ngIf="isLoggedIn" routerLink="profile">
+          <mat-icon matListIcon>person_pin</mat-icon>
+          <span>Dados do usuário</span>
+        </a>
+
+        <a mat-list-item *ngIf="isLoggedIn" routerLink="produto/novo/">
             <mat-icon matListIcon>library_add</mat-icon>
             <span>Cadastrar Produto</span>
         </a>
-        <a mat-list-item routerLink="produto/listar/">
+        <a mat-list-item *ngIf="isLoggedIn" routerLink="produto/listar/">
           <mat-icon matListIcon>view_list</mat-icon>
           <span>Listar Produtos</span>
       </a>
-        <a mat-list-item routerLink="estoque/movimento/">
+        <a mat-list-item *ngIf="isLoggedIn" routerLink="estoque/movimento/">
           <mat-icon matListIcon>add_circle_outline</mat-icon>
           <span>Cadastrar Movimentação</span>
         </a>
-        <a mat-list-item routerLink="estoque/movimentacoes/">
+        <a mat-list-item *ngIf="isLoggedIn" routerLink="estoque/movimentacoes/">
           <mat-icon matListIcon>list</mat-icon>
           <span>Listar Movimentações</span>
         </a>
-        <a mat-list-item routerLink="estoque/movimentofinanceiro/">
+        <a mat-list-item *ngIf="isLoggedIn" routerLink="estoque/movimentofinanceiro/">
           <mat-icon matListIcon>attach_money</mat-icon>
           <span>Listar Lucro</span>
         </a>
-        <a mat-list-item routerLink="estoque/movimentoprodutoportipo/">
+        <a mat-list-item *ngIf="isLoggedIn" routerLink="estoque/movimentoprodutoportipo/">
           <mat-icon matListIcon>money</mat-icon>
           <span>Listar Movimentações pelo tipo do Produto</span>
       </a>

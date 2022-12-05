@@ -20,8 +20,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.unimed.estoque.services.ProdutoService;
 import com.unimed.estoque.shared.ProdutoDTO;
-import com.unimed.estoque.view.model.ProdutoRequest;
-import com.unimed.estoque.view.model.ProdutoResponse;
+import com.unimed.estoque.view.model.request.ProdutoRequest;
+import com.unimed.estoque.view.model.response.ProdutoResponse;
 
 @RestController
 @RequestMapping("/api/mercado/produto")

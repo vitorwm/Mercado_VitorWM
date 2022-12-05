@@ -1,5 +1,3 @@
-import { Produto } from "./Produto";
-
 export enum TipoMovimento {
   ENTRADA = "ENTRADA",
   SAIDA = "SAIDA"
@@ -13,6 +11,6 @@ export class MovEstoque{
   data?: Date;
   produto!: {
     id : number;
-  };
+};
 
 }

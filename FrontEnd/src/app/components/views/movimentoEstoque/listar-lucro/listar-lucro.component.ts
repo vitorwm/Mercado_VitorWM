@@ -1,7 +1,7 @@
 import { MovEstoqueLucro } from './../../../../models/MovEstoqueLucro';
-import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { MovEstoqueService } from 'src/app/services/movEstoque.service';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({

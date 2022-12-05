@@ -24,10 +24,10 @@ import com.unimed.estoque.model.MovimentoEstoqueTipoProduto;
 import com.unimed.estoque.model.TipoProduto;
 import com.unimed.estoque.services.MovimentoEstoqueService;
 import com.unimed.estoque.shared.MovimentoEstoqueDTO;
-import com.unimed.estoque.view.model.MovimentoEstoqueLucroProdutoResponse;
-import com.unimed.estoque.view.model.MovimentoEstoqueRequest;
-import com.unimed.estoque.view.model.MovimentoEstoqueResponse;
-import com.unimed.estoque.view.model.MovimentoEstoqueTipoProdutoResponse;
+import com.unimed.estoque.view.model.request.MovimentoEstoqueRequest;
+import com.unimed.estoque.view.model.response.MovimentoEstoqueLucroProdutoResponse;
+import com.unimed.estoque.view.model.response.MovimentoEstoqueResponse;
+import com.unimed.estoque.view.model.response.MovimentoEstoqueTipoProdutoResponse;
 
 @RestController
 @RequestMapping("/api/mercado/estoque")

@@ -48,7 +48,7 @@
 
     <ng-container matColumnDef="valorFornecedor">
       <th mat-header-cell *matHeaderCellDef> Valor do Fornecedor </th>
-      <td mat-cell *matCellDef="let movimento"> {{ movimento.produto.valorFornecedor }} </td>
+      <td mat-cell *matCellDef="let movimento"> {{ movimento.produto.valorFornecedor.toFixed(2) }} </td>
     </ng-container>
 
     <ng-container matColumnDef="estoque">

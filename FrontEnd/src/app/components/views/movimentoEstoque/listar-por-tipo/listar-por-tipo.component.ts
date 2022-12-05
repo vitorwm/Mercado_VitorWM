@@ -1,11 +1,11 @@
+import { ActivatedRoute, Router } from '@angular/router';
 import { MovEstoqueService } from 'src/app/services/movEstoque.service';
 import { MovEstoquePorTipo } from './../../../../models/MovEstoquePorTipo';
-import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
-import { ActivatedRoute, Router } from '@angular/router';
 import { TipoProduto } from 'src/app/models/Produto';
 import { HttpErrorResponse } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-listar-por-tipo',

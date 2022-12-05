@@ -1,11 +1,10 @@
 import { MovEstoque } from './../../../../models/MovEstoque';
 import { MovEstoqueService } from './../../../../services/movEstoque.service';
-import { Component, OnInit } from '@angular/core';
 import { TipoMovimento } from 'src/app/models/MovEstoque';
-import { Produto } from 'src/app/models/Produto';
-import { ActivatedRoute, Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { HttpErrorResponse } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-cadastrar-movimento',
@@ -24,10 +23,8 @@ export class CadastrarMovimentoComponent implements OnInit {
 
   constructor( private movEstoqueService: MovEstoqueService, private router: Router, private snack: MatSnackBar, private route: ActivatedRoute) {}
 
-
   ngOnInit(): void {
   }
-
 
   cadastrar(): void {
 
@@ -66,7 +63,5 @@ export class CadastrarMovimentoComponent implements OnInit {
           }
       }
     })
-
-    ;}
-
+  }
 }
