@@ -36,6 +36,13 @@ BackEnd: 8080, postgre: 5432, FrontEnd: 4200
 ```
 
 - Script Json para testar o BackEnd utilizando postman: Backend Estoque Unimed.postman_collection.json
+- (Não é obrigatório utilizar o postman e os testes do back-end para poder utilizar o front-end da aplicação)
+- Abra o Postman, clique em File > Import > selecione onde foi clonado o repositório e selecione o arquivo citado a cima.
+- Primeiro realizar o cadastro do usuário pelo usuario.http
+- copiar o token retornado ao realizar o cadastro apertando o texto Send Request
+- Com o token copiado, abra a requisição que pretende realizar pelo postman, entre na aba Authorization, selecione o tipo Bearer token e cole o token no campo de texto.
+- Para alterar os dados da requisição entre na aba body e mude o valor dos atributos
+
 
     
 ## Extensões do vscode
